@@ -13,6 +13,7 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
+const PORT = process.env.PORT || 4000;
 
 io.on("connection", (socket) => {
   console.log("New client:", socket.id);
@@ -152,7 +153,5 @@ io.on("connection", (socket) => {
     });
   }
 });
-
-server.listen(4000, () =>
-  console.log("Server running on http://localhost:4000")
-);
+app.get('/', (req, res) => res.send('Guessing Game Server is running'));
+server.listen(PORT, () => console.log(`Server listening on ${PORT}`));
