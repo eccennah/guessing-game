@@ -41,6 +41,50 @@ body {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+body {
+  background: purple;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.game-header {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #4b006e, 0 2px 12px #0008;
+  margin-bottom: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #a259ff 0%, #6a00f4 100%);
+  border-radius: 12px;
+  padding: 18px 0;
+  box-shadow: 0 4px 24px #0002;
+}
+
+button {
+  background: linear-gradient(90deg, #a259ff 0%, #6a00f4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #6a00f4 0%, #a259ff 100%);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+input {
+  border-radius: 6px;
+  border: 1px solid #a259ff;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 1rem;
 }

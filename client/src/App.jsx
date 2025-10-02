@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:4000";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || window.location.origin;
 
 export default function App() {
   const [socket, setSocket] = useState(null);
@@ -146,7 +146,7 @@ export default function App() {
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 16 }}>
-      <h1>Guessing Game 🎮</h1>
+        <h1 className="game-header">Guessing Game 🎮</h1>
 
       {!connected && (
         <div style={{ display: "grid", gap: 8, maxWidth: 420 }}>
