@@ -146,7 +146,7 @@ export default function App() {
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 16 }}>
-        <h1 className="game-header">Guessing Game 🎮</h1>
+            <h1 className="game-header">Guessing Game 🎮</h1>
 
       {!connected && (
         <div style={{ display: "grid", gap: 8, maxWidth: 420 }}>
@@ -164,6 +164,8 @@ export default function App() {
         </div>
       )}
 
+    
+
       {connected && (
         <div
           style={{
@@ -173,7 +175,7 @@ export default function App() {
             marginTop: 16,
           }}
         >
-          <div style={{ border: "1px solid #ddd", padding: 12 }}>
+          <div className="side-panel">
             <h3>Players ({players.length})</h3>
             <ul>
               {players.map((p) => (
@@ -184,7 +186,7 @@ export default function App() {
               ))}
             </ul>
 
-            <div>
+            <div className="player-stats">
               State: <strong>{gameState}</strong>
               <br />
               Time left: <strong>{timeLeft}s</strong>
@@ -194,7 +196,7 @@ export default function App() {
             <button onClick={leave}>Leave Session</button>
 
             {isGameMaster && (
-              <div style={{ marginTop: 12 }}>
+              <div className="gm-controls">
                 <h4>Game Master controls</h4>
                 <input
                   placeholder="Question"
@@ -212,8 +214,8 @@ export default function App() {
             )}
           </div>
 
-          <div style={{ border: "1px solid #eee", padding: 12 }}>
-            <div style={{ height: 300, overflowY: "auto" }}>
+          <div className="main-panel">
+            <div className="messages-list">
               {messages.map((m, i) => (
                 <div key={i}>
                   <small>{m.ts}</small> {m.system ? <em>{m.text}</em> : m.text}
@@ -222,7 +224,7 @@ export default function App() {
             </div>
 
             {currentQuestion ? (
-              <div>
+              <div className="guess-section">
                 <strong>Question:</strong> {currentQuestion}
                 <br />
                 <input placeholder="Your guess" ref={guessRef} />

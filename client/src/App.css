@@ -4,18 +4,51 @@
   padding: 2rem;
   text-align: center;
 }
+.side-panel {
+  border: 2.5px solid #a259ff;
+  border-radius: 16px;
+  background: rgba(162, 89, 255, 0.12);
+  box-shadow: 0 4px 18px #6a00f422, 0 1.5px 0 #fff4 inset;
+  padding: 18px 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.player-stats {
+  margin-bottom: 12px;
+  font-size: 1.08em;
+  color: #4b006e;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.gm-controls {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #a259ff44;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.main-panel {
+  border: 2px solid #eee;
+  border-radius: 16px;
+  background: #fff8;
+  padding: 18px 16px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 2px 12px #0001;
+}
+
+.messages-list {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 4px;
+}
+
+.guess-section input {
+  margin-right: 8px;
 }
 
 body {
